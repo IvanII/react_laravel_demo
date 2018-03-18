@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Product from './Product';
+import AddProduct from './AddProduct';
 
 /* Main Component */
 class Main extends Component {
@@ -59,6 +60,7 @@ class Main extends Component {
                     </ul>
                 </div>
                 <Product product={this.state.currentProduct} />
+                <AddProduct onAdd={this.handleAddProduct} />
             </div>
         );
     }
@@ -66,4 +68,5 @@ class Main extends Component {
 
 if (document.getElementById('main')) {
     ReactDOM.render(<Main />, document.getElementById('main'));
+
 }

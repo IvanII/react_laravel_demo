@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-/* Stateless component or pure component
- * { product } syntax is the object destructing
- */
 const Product = ({product}) => {
 
     const divStyle = {
@@ -13,7 +10,6 @@ const Product = ({product}) => {
         return(<div style={divStyle}>  Product Doesnt exist </div>);
     }
 
-    //Else, display the product data
     return(
         <div style={divStyle}>
             <h2> {product.title} </h2>
